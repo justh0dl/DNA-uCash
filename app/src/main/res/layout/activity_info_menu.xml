@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dnaucash_black">
+
+    <Button
+        android:id="@+id/buttonAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dnaucash_gold"
+        android:text="About"
+        android:textAllCaps="false"
+        android:textColor="@color/dnaucash_black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonSecurity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dnaucash_gold"
+        android:text="Security"
+        android:textAllCaps="false"
+        android:textColor="@color/dnaucash_black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonHowCoinsWork"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dnaucash_gold"
+        android:text="How Coins Work"
+        android:textAllCaps="false"
+        android:textColor="@color/dnaucash_black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonMintingGuide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dnaucash_gold"
+        android:text="Minting Guide"
+        android:textAllCaps="false"
+        android:textColor="@color/dnaucash_black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonSpend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/dnaucash_gold"
+        android:text="How to Spend"
+        android:textAllCaps="false"
+        android:textColor="@color/dnaucash_black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonDatabase"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/dnaucash_gold"
+        android:text="Database"
+        android:textAllCaps="false"
+        android:textColor="@color/dnaucash_black"
+        android:textStyle="bold" />
+
+</LinearLayout>

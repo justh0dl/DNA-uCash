@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dnaucash_black">#050505</color>
+    <color name="dnaucash_panel">#101010</color>
+    <color name="dnaucash_panel_border">#4A3310</color>
+    <color name="dnaucash_gold">#E3B341</color>
+    <color name="dnaucash_gold_dark">#A77A19</color>
+    <color name="dnaucash_text_primary">#F5F5F5</color>
+    <color name="dnaucash_text_secondary">#B8B8B8</color>
+    <color name="dnaucash_text_hint">#7E7E7E</color>
+    <color name="dnaucash_green_bg">#113321</color>
+    <color name="dnaucash_green_border">#2D8A56</color>
+</resources>

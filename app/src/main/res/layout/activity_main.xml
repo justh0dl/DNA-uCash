@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dnaucash_black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageLogo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="DNAuCash logo"
+                    android:src="@drawable/dnaucash_logo" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/dnaucash_gold"
+                android:text="Info"
+                android:textAllCaps="false"
+                android:textColor="@color/dnaucash_black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="A Bit of Physical Bitcoin | aka 'The Sats Button'"
+            android:textColor="@color/dnaucash_gold"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_panel"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/buttonTabCreate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_gold"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="CREATE COIN"
+                android:textColor="@color/dnaucash_black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/buttonTabScan"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_dark"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="SCAN &amp; REVEAL"
+                android:textAlignment="center"
+                android:textColor="@color/dnaucash_gold"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCreateSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_panel"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/textTokenTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Token Type"
+                android:textColor="@color/dnaucash_gold"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupTokenType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioTokenBearer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Bearer"
+                    android:textColor="@color/dnaucash_gold" />
+
+                <RadioButton
+                    android:id="@+id/radioTokenGuarded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Guarded"
+                    android:textColor="@color/dnaucash_gold" />
+
+                <RadioButton
+                    android:id="@+id/radioTokenStealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Stealth"
+                    android:textColor="@color/dnaucash_gold" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textCreateModeSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Bearer token: possession-based reveal."
+                android:textColor="@color/dnaucash_text_secondary" />
+
+            <EditText
+                android:id="@+id/inputAddress"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input"
+                android:hint="Paste address here"
+                android:inputType="textNoSuggestions"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/dnaucash_text_primary"
+                android:textColorHint="@color/dnaucash_text_hint" />
+
+            <EditText
+                android:id="@+id/inputPrivateKey"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:hint="Paste private key here"
+                android:inputType="textNoSuggestions"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/dnaucash_text_primary"
+                android:textColorHint="@color/dnaucash_text_hint" />
+
+            <EditText
+                android:id="@+id/inputMessage"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:gravity="top|start"
+                android:hint="Message (optional)"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:padding="14dp"
+                android:maxLength="48"
+                android:textColor="@color/dnaucash_text_primary"
+                android:textColorHint="@color/dnaucash_text_hint" />
+
+            <TextView
+                android:id="@+id/textMessageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0 / 48"
+                android:textColor="@color/dnaucash_text_secondary" />
+
+            <LinearLayout
+                android:id="@+id/layoutGuardedSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textGuardedSecretLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guarded Secret"
+                    android:textColor="@color/dnaucash_gold"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputGuardedSecret"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input"
+                    android:hint="Enter PIN, password, or passphrase"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="14dp"
+                    android:textColor="@color/dnaucash_text_primary"
+                    android:textColorHint="@color/dnaucash_text_hint" />
+
+                <EditText
+                    android:id="@+id/inputGuardedSecretConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_input"
+                    android:hint="Confirm guarded secret"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="14dp"
+                    android:textColor="@color/dnaucash_text_primary"
+                    android:textColorHint="@color/dnaucash_text_hint" />
+
+                <TextView
+                    android:id="@+id/textSecretGradeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Secret Grade"
+                    android:textColor="@color/dnaucash_gold"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textSecretGradeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Bronze"
+                    android:textColor="@color/dnaucash_gold"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textSecretGradeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="4–6 digit PIN. Very fast to enter, but low entropy."
+                    android:textColor="@color/dnaucash_text_secondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutStealthSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textStealthStyleLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stealth Style"
+                    android:textColor="@color/dnaucash_gold"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupStealthStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioStealthDoor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Door / Access Code"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioStealthMeet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Google Meet / URL"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioStealthContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Employee ID Card"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioStealthWifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="WiFi Config"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioStealthNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Maintenance Tag / Log"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioStealthAsset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Asset / Inventory Tag"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioStealthTicket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Event Ticket"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioStealthCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Custom Public Message"
+                        android:textColor="@color/dnaucash_gold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textStealthPublicMessageLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Public Message Field"
+                    android:textColor="@color/dnaucash_gold"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputStealthPublicMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="top|start"
+                    android:hint="Text shown to generic NFC apps"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:padding="14dp"
+                    android:textColor="@color/dnaucash_text_primary"
+                    android:textColorHint="@color/dnaucash_text_hint" />
+
+                <TextView
+                    android:id="@+id/textStealthPublicMessageCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="0 / 160"
+                    android:textColor="@color/dnaucash_text_secondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutForgeSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textForgeLevelLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forge Level"
+                    android:textColor="@color/dnaucash_gold"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupForge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioForgeCast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Cast (~1s)"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioForgeForged"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Forged (~3s)"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioForgeTempered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Tempered (~7s)"
+                        android:textColor="@color/dnaucash_gold" />
+
+                    <RadioButton
+                        android:id="@+id/radioForgeHardened"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Hardened (~21s)"
+                        android:textColor="@color/dnaucash_gold" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switchLogMintedCoins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Log minted coin"
+                android:textColor="@color/dnaucash_gold"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/buttonProgramTag"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/dnaucash_gold"
+                android:text="PROGRAM TAG"
+                android:textAllCaps="false"
+                android:textColor="@color/dnaucash_black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textCreateStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ready"
+                android:textColor="@color/dnaucash_text_primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutScanSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_panel"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textScannedAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address: -"
+                android:textColor="@color/dnaucash_gold"
+                android:textIsSelectable="true" />
+
+            <Button
+                android:id="@+id/buttonCopyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="#111111"
+                android:text="COPY ADDRESS"
+                android:textAllCaps="false"
+                android:textColor="@color/dnaucash_gold"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textScannedState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="State: -"
+                android:textColor="@color/dnaucash_gold" />
+
+            <TextView
+                android:id="@+id/textScannedMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Message: -"
+                android:textColor="@color/dnaucash_gold" />
+
+            <TextView
+                android:id="@+id/textScannedHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Help: -"
+                android:textColor="@color/dnaucash_gold" />
+
+            <TextView
+                android:id="@+id/textBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Balance: -"
+                android:textColor="@color/dnaucash_gold"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonOpenMempool"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#111111"
+                android:text="OPEN MEMPOOL"
+                android:textAllCaps="false"
+                android:textColor="@color/dnaucash_gold"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonReveal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/dnaucash_gold"
+                android:text="REVEAL"
+                android:textAllCaps="false"
+                android:textColor="@color/dnaucash_black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textRevealStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Private key here"
+                android:textColor="@color/dnaucash_gold"
+                android:textIsSelectable="true" />
+
+            <Button
+                android:id="@+id/buttonCopyPrivateKey"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="#111111"
+                android:text="COPY PRIVATE KEY"
+                android:textAllCaps="false"
+                android:textColor="@color/dnaucash_gold"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

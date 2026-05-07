@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.DNAuCash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- BRAND COLORS -->
+        <item name="colorPrimary">@color/dnaucash_gold</item>
+        <item name="colorPrimaryVariant">@color/dnaucash_gold_dark</item>
+        <item name="colorOnPrimary">@color/dnaucash_black</item>
+
+        <item name="colorSecondary">@color/dnaucash_gold</item>
+
+        <!-- 🔥 THIS IS THE FIX -->
+        <item name="colorOnSurface">#FFD700</item>
+        <item name="android:textColorPrimary">#FFD700</item>
+
+        <!-- SYSTEM -->
+        <item name="android:statusBarColor">@color/dnaucash_black</item>
+        <item name="android:navigationBarColor">@color/dnaucash_black</item>
+        <item name="android:windowBackground">@color/dnaucash_black</item>
+
+        <!-- TEXT -->
+        <item name="android:textColor">@color/dnaucash_text_primary</item>
+
+        <!-- OPTIONAL (helps buttons behave) -->
+        <item name="materialButtonStyle">@style/Widget.DNAuCash.Button</item>
+
+    </style>
+
+    <!-- BUTTON OVERRIDE -->
+    <style name="Widget.DNAuCash.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">#FFD700</item>
+    </style>
+
+</resources>
