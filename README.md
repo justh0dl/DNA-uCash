@@ -31,11 +31,12 @@ DNA uCash is best understood as a practical physical Bitcoin system with layered
 ### Guarded Tokens
 
 - require both the tag and a password
-- secret is never stored on the tag
+- the password is not stored on the tag and the physical copy of the password should be kept apart
 - derivation occurs locally on-device
 
 ### Stealth Tokens
 
+- all features of Guarded tokens +
 - disguised public appearance
 - protected metadata stored behind NTAG424 authentication
 - designed to avoid obviously advertising itself as a Bitcoin token
@@ -172,7 +173,7 @@ It is NOT intended to replace:
 
 # Future Possibilities
 
-NTAG424 DNA tags include SUN/SDM messaging and tag-server authentication features.
+NTAG424 DNA tags include SUN/SDM messaging and tag-server authentication features. This feature is currently not implemented as the goal for v100 was to build an offline system.
 
 These may support future community mint systems with stronger anti-counterfeit verification and server-backed authenticity checks.
 
@@ -206,7 +207,7 @@ I regularly consume "more technical Bitcoin content" including:
 
 This is intentionally a Bitcoin-only project.
 
-DNAu Cash will never support altcoins. Altcoins as scams, distractions, or unnecessary complexity.
+DNAu Cash will never support altcoins. Altcoins are scams, distractions, or unnecessary complexity.
 
 The original inspiration for DNA uCash came from an older idea I had around 2020–2021 involving “sneakernet coins” — offline physical NFC Bitcoin bearer instruments that could be passed around somewhat like digital cash.
 
